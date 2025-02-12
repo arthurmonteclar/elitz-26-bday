@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe4b5;
+            font-family: 'Atma', cursive;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff4500;
+            font-family: 'Knewave', cursive;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-size: 1.5em;
+            color: #2e8b57;
+        }
+        .btn {
+            color: #ffe4b5;
+            font-family: 'Knewave', cursive;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            padding: 0.5rem;
+            border: 2px solid #e5dc15;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.6em #c2bb11, 0 0.9em rgba(0, 0, 0, 0.4);
+            background: url('https://media2.giphy.com/media/W3KuM3asRsCjHW1xDp/giphy.gif?cid=6c09b952ys83wx62910ecekw1vhi0ednycjamasfxvdneqmx&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            width: 35%;
+        }
+        .btn:hover {
+            background: #e5dc15;
+            color: #0e79b2;
+        }
+        .gif-left, .gif-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 225px;
+            height: auto;
+        }
+        .gif-left {
+            left: 20px;
+        }
+        .gif-right {
+            right: 20px;
+        }
+        @media (max-width: 768px) {
+            .gif-left, .gif-right {
+                display: none;
+            }
+            h1 {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="oia-uia.gif" class="gif-left" alt="Floating gif">
+    <img src="oia-uia.gif" class="gif-right" alt="Floating gif">
+    <h1>🎉 Happy 26th Birthday Elitz! 🎂</h1>
+    <iframe src="https://www.tiktok.com/embed/7469629831970409735" width="325" height="575" frameborder="0" allowfullscreen></iframe>
+    <p>Here's to our <i>Sobrang Latina</i> girly! Were you expecting this?</p>
+    <a href="second-page.html" class="btn b-3">No...?</a>
+    
+</body>
+</html>
