@@ -11,18 +11,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: #ffe4b5;
             text-align: center;
             flex-direction: column;
-            padding-top: 2rem; /* Adds space to prevent cutoff */
+            box-sizing: border-box;
         }
 
         h1 {
             font-size: 4em;
             color: #ff4500;
             font-family: 'Knewave', cursive;
-            margin: 1rem 0.5rem 0.5rem; /* Adds spacing above and below */
+            margin: 2rem 0.5rem 0.5rem; /* Increased top margin */
         }
 
         .carousel-container {
@@ -68,9 +67,8 @@
             border: 2px solid #e5dc15;
             border-radius: 0.5rem;
             box-shadow: 0 0.6em #c2bb11, 0 0.9em rgba(0, 0, 0, 0.4);
-            background: url('https://media2.giphy.com/media/W3KuM3asRsCjHW1xDp/giphy.gif?cid=6c09b952ys83wx62910ecekw1vhi0ednycjamasfxvdneqmx&ep=v1_gifs_search&rid=giphy.gif&ct=g');
-            background-size: cover;
-            background-position: center;
+            
+            
             display: inline-block;
             width: 20rem;
         }
@@ -82,6 +80,9 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 3em;
+            }
+            .btn-move-on {
+                width: 20rem !important; /* Same width as previous/next buttons */
             }
         }
         .carousel-text>video {
@@ -99,27 +100,86 @@
         .carousel-text div {
             font-size:16px;
         }
+        .btn-move{
+            margin-bottom:1rem;
+            background: url('https://godotshaders.com/wp-content/uploads/2021/01/baltro.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-move-on{
+            width: 40rem;
+            background: url('https://media2.giphy.com/media/W3KuM3asRsCjHW1xDp/giphy.gif?cid=6c09b952ys83wx62910ecekw1vhi0ednycjamasfxvdneqmx&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (min-width: 769px) { /* Applies only for non-mobile screens */
+            .carousel-text > img, 
+            .carousel-text > video {
+                width: 600px;
+                height: 600px;
+                object-fit: cover; /* Ensures the image fills the space without distortion */
+            }
+           /* Applies only for non-mobile screens */
+            .btn-move-on {
+                width: 41rem; /* Slightly more than 2 * 20rem to account for spacing */
+            }
+        }
+
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal input {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            width: 80%;
+            font-size: 1rem;
+        }
+
+        .modal button {
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>Here's some 26 facts and pics for your 26th birthday</h1>
     <p style="font-size: 1.5em;">I added in 26 pictures to look back to what happened during the 26th <sup style="font-size: 0.5em;"><i>(pics unrelated)</i></sup></p>
     <div class="carousel-container">
-        <div class="carousel-text active"><img src="1-26-2016.jpg"><br><div>Picture taken on January 26, 2016.</div><span>26 is the only number between a square (25) and a cube (27).</span></div>
-        <div class="carousel-text"><img src="1-26-2021.jpg"><br><div>Picture taken on January 26, 2021.</div> <span>The Latin alphabet has 26 letters.</span></div>
+        <div class="carousel-text active"><img src="1-26-2016.jpg"><br><div>Picture taken on January 26, 2016.</div><span>January 26th is celebrated as Australia Day, marking the arrival of the First Fleet in 1788.</span></div>
+        <div class="carousel-text"><img src="1-26-2021.jpg"><br><div>Picture taken on January 26, 2021.</div> <span>Italians consume an average of 26 kilograms of pasta per person each year. This is about five times the global average.</span></div>
         <div class="carousel-text">
             <video loop controls="controls" width="800" height="600" name="1-26-2023.mp4" autoplay muted>
                 <source src="1-26-2023.mp4">
             </video><br><div>Live picture taken on January 26, 2023.</div> <span>In human biology, the normal human foot has 26 bones.</span>
         </div>
-        <div class="carousel-text"><img src="2-26-2017.jpg"><br><div>Picture taken on February 26, 2017.</div> <span>A Rubik’s Cube can be solved in a maximum of 26 moves.</span></div>
+        <div class="carousel-text"><img src="2-26-2017.jpg"><br><div>Picture taken on February 26, 2017.</div> <span>26 is the only number between a square (25) and a cube (27).</span></div>
         <div class="carousel-text"><img src="2-26-2023.jpg"><br><div>Picture taken on February 26, 2023.</div> <span>26 is the atomic number of iron (Fe).</span></div>
         <div class="carousel-text">
             <video loop controls="controls" width="800" height="600" name="2-26-2023.mp4" autoplay muted>
                 <source src="2-26-2023.mp4">
             </video><br><div>Live picture taken on February 26, 2023.</div><span>The number 26 is the sum of the first six odd numbers (1+3+5+7+9+11 = 26).</span>
         </div>
-        <div class="carousel-text"><img src="3-26-2017.jpg"><br><div>Picture taken on March 26, 2017.</div> <span>In Roman numerals, 26 is written as XXVI.</span></div>
+        <div class="carousel-text"><img src="3-26-2017.jpg"><br><div>Picture taken on March 26, 2017.</div> <span>In numerology, 26 is often associated with balance, material accumulation, and partnerships.</span></div>
         <div class="carousel-text"><img src="3-26-2018.jpg"><br><div>Picture taken on March 26, 2018.</div> <span>There are 26 red cards in a standard deck (diamonds and hearts combined).</span></div>
         <div class="carousel-text"><img src="3-26-2019.jpg"><br><div>Picture taken on March 26, 2019.</div> <span>The United States had 26 states in 1837.</span></div>
         <div class="carousel-text"><img src="4-26-2018.jpg"><br><div>Picture taken on April 26, 2018.</div> <span>The English Premier League features 26 teams that have participated since its inception.</span></div>
@@ -139,7 +199,7 @@
         <div class="carousel-text">
             <video loop controls="controls" width="800" height="600" name="9-26-2022.mp4" autoplay muted>
                 <source src="9-26-2022.mp4">
-            </video><br><div>Live picture taken on September 26, 2022.</div> <span>In darts, a common bad score is 26 (hitting a 20, a 5, and a 1).</span>
+            </video><br><div>Live picture taken on September 26, 2022.</div> <span> In darts, a "bed and breakfast" or "breakfast" refers to a score of 26, typically achieved by hitting a 20, a 5, and a 1.</span>
         </div>
         <div class="carousel-text"><img src="10-26-2023.jpg"><br><div>Picture taken on October 26, 2023.</div> <span>The first Apollo mission to land on the Moon (Apollo 11) launched on July 16, 1969—exactly 26 years after the first atomic bomb test.</span></div>
         <div class="carousel-text"><img src="10-26-2024.jpg"><br><div>Picture taken on October 26, 2024.</div> <span>The number 26 is often used in encryption algorithms like RSA.</span></div>
@@ -162,12 +222,24 @@
     </div>    
 
     <div class="buttons">
-        <button class="btn" onclick="prevText()">Previous</button>
-        <button class="btn" onclick="nextText()">Next</button>
+        <button class="btn btn-move" onclick="prevText()">Previous</button>
+        <button class="btn btn-move" onclick="nextText()">Next</button>
     </div>
+    <a href="#" class="btn b-3 btn-move-on" id="protectedLink">Aight I've seen enough</a>
     <div class="auto-rotate-container">
         <input type="checkbox" id="autoRotate" checked>
         <label for="autoRotate">Enable Auto-Rotate</label>
+    </div>
+    <!-- Hidden Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>Let's see if attentive: Kinsa ang ga peace sign sa picture pag June 26, 2022?</h2>
+            <form id="passwordForm">
+                <input type="password" id="passwordInput" placeholder="Enter password" required>
+                <button id="submitPassword" type="submit">Submit</button>
+                <button type="button" id="closeModal">Cancel</button>
+            </form>
+        </div>
     </div>
 
     <script>
@@ -216,6 +288,36 @@
         });
 
         startAutoRotate();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Show the modal when the link is clicked
+        document.querySelector(".btn-move-on").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent navigation
+            document.querySelector("#passwordModal").style.display = "flex";
+        });
+
+        // Handle form submission
+        document.querySelector("#passwordForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            
+            const correctPassword = "bien"; // Set the correct password
+            const userInput = document.querySelector("#passwordInput").value.toLowerCase();
+
+            if (userInput === correctPassword) {
+                window.location.href = "messages.html"; // Redirect if correct
+            } else {
+                alert("Incorrect password! Try again.");
+            }
+        });
+
+        // Close modal when "Cancel" is clicked
+        document.querySelector("#closeModal").addEventListener("click", function() {
+            document.querySelector("#passwordModal").style.display = "none";
+        });
+    });
+
     </script>
 </body>
 </html>

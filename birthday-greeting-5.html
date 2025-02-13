@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #ffe4b5;
+            font-family: 'Atma', cursive;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff4500;
+            font-family: 'Knewave', cursive;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-size: 1.5em;
+            color: black;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            color: #0e79b2;
+            font-family: 'Knewave', cursive;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 1rem;
+            padding: 0.5rem;
+            border: 2px solid #0e79b2;
+            border-radius: 0.5rem;
+            position: relative;
+            top: 0;
+            transition: all 300ms ease-in-out;
+            box-shadow: 0 0.6em #0c6797, 0 0.9em rgba(0, 0, 0, 0.4);
+            }
+
+        .btn:hover {
+            background: #0e79b2;
+            color: #ffe4b5;
+        }
+
+        .btn.b-3:hover {
+        top: -0.5em;
+        box-shadow: 0 0.6em #0c6797, 0 1.3em rgba(0, 0, 0, 0.4);
+        }
+
+        .btn.b-3:active {
+        top: 0.4em;
+        box-shadow: 0 0.2em #0c6797, 0 0.5em rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .btn-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .btn {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Then, hopefully my next gift would reach you in time.</h1>
+    <p>HAPPY BIRTHDAY!</p>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@sydneysimss/video/7279178561557105963" data-video-id="7279178561557105963" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@sydneysimss" href="https://www.tiktok.com/@sydneysimss?refer=embed">@sydneysimss</a> goodbye to 25 - on to the next chapter <a title="birthday" target="_blank" href="https://www.tiktok.com/tag/birthday?refer=embed">#birthday</a> <a title="taylorswift" target="_blank" href="https://www.tiktok.com/tag/taylorswift?refer=embed">#taylorswift</a> <a target="_blank" title="♬ its supposed to be fun turning 26 - sam carr" href="https://www.tiktok.com/music/its-supposed-to-be-fun-turning-26-7039496513680050950?refer=embed">♬ its supposed to be fun turning 26 - sam carr</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+    
+    <div class="btn-container">
+        <a href="index.html" class="btn b-3">Start Again?</a>
+        <a href="messages.html" class="btn b-3">Lemme see the messages</a>
+        <a href="second-page.html" class="btn b-3">Lemme see the pics</a>
+    </div>
+</body>
+</html>

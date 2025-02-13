@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Messages from the PH peeps ♥</title>
+    <style>
+        body {
+            font-family: 'Atma', cursive !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffe4b5;
+            text-align: center;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ff4500;
+            font-family: 'Knewave', cursive;
+            margin: 2rem 0.5rem 0.5rem;
+        }
+
+        .carousel-container {
+            width: 80%;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .carousel-text {
+            font-family: 'Atma', cursive;
+            display: none;
+            font-size: 1.5em;
+            color: #333;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .carousel-text > img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+        .btn-move{
+            margin-bottom:1rem;
+            background: url('https://godotshaders.com/wp-content/uploads/2021/01/baltro.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-move-on{
+            width: 40rem;
+            background: url('https://media2.giphy.com/media/W3KuM3asRsCjHW1xDp/giphy.gif?cid=6c09b952ys83wx62910ecekw1vhi0ednycjamasfxvdneqmx&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            color: #ffe4b5;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-bottom: 2.5rem;
+            padding: 0.5rem;
+            border: 2px solid #e5dc15;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.6em #c2bb11, 0 0.9em rgba(0, 0, 0, 0.4);
+            display: inline-block;
+            width: 20rem;
+        }
+
+        .btn:hover {
+            background: #e5dc15;
+            color: #0e79b2;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .btn-move-on {
+                width: 20rem !important;
+            }
+        }
+
+        .carousel-text>video {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .carousel-text span {
+            display: block;
+            height: 3em;
+            line-height: 1.5em;
+            overflow: hidden;
+            text-align: center;
+        }
+        .carousel-text div {
+            font-size:16px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>And now, messages from your 🇵🇭 friends</h1>
+    <p style="font-size: 1.5em;">Even though you're in 🇪🇸, we still wanna greet you a happy birthday 🙏<sup style="font-size: 0.5em;"><i>(more to come)</i></sup></p>
+    <div class="carousel-container">
+        <div class="carousel-text active">
+            <video loop controls autoplay>
+                <source src="jp.mp4">
+            </video><br><span>From our tea-full friend JP. It's giving fonz vibes 💅</span>
+        </div>
+        <div class="carousel-text">
+            <video loop controls autoplay muted>
+                <source src="tangposes.mp4">
+            </video><br><span>A special message from the Tangposes directly from Disneyland Hong Kong 🏰</span>
+        </div>
+        <div class="carousel-text">
+            <video loop controls autoplay muted>
+                <source src="felix.mp4">    
+            </video><br><span><img src="felix-ss.jpg" height="100%"></span>
+        </div>
+        <div class="carousel-text">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5uYtqy-Gd9g?si=YHhEMuDf54TZXAVR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>    
+
+    <div class="buttons">
+        <button class="btn btn-move" onclick="prevText()">Previous</button>
+        <button class="btn btn-move" onclick="nextText()">Next</button>
+    </div>
+    <a href="birthday-greeting-1.html" class="btn btn-move-on">Thank you everyone!</a>
+
+    <script>
+        let currentIndex = 0;
+        const texts = document.querySelectorAll('.carousel-text');
+
+        function showText(index) {
+            texts.forEach((text, i) => {
+                const video = text.querySelector('video');
+                text?.classList?.remove('active');
+                video?.muted = true;
+                if (i === index) {
+                    text?.classList.add('active');
+                    video?.muted = false;
+                }
+            });
+        }
+
+        function nextText() {
+            currentIndex = (currentIndex + 1) % texts.length;
+            showText(currentIndex);
+        }
+
+        function prevText() {
+            currentIndex = (currentIndex - 1 + texts.length) % texts.length;
+            showText(currentIndex);
+        }
+    </script>
+</body>
+</html>
