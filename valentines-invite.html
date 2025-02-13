@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #fdd2ff;
+            font-family: 'Atma', cursive;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-size: 1.5em;
+            color: #2e8b57;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff35ff;
+            border-radius: 0.5rem;
+            position: relative;
+            top: 0;
+            transition: all 300ms ease-in-out;
+            box-shadow: 0 0.6em #962296, 0 0.9em rgba(0, 0, 0, 0.4);
+            }
+
+        .btn:hover {
+            background: #ff35ff;
+            color: #fdd2ff;
+        }
+
+        .btn.b-3:hover {
+        top: -0.5em;
+        box-shadow: 0 0.6em #962296, 0 1.3em rgba(0, 0, 0, 0.4);
+        }
+
+        .btn.b-3:active {
+        top: 0.4em;
+        box-shadow: 0 0.2em #962296, 0 0.5em rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .btn-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .btn {
+                width: 80%;
+            }
+        }
+
+        .carousel-container {
+            width: 300px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .carousel-track {
+            display: flex;
+            width: fit-content;
+            animation: scroll 5s linear infinite;
+        }
+        .carousel-track img {
+            width: 300px;
+            height: auto;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-80%); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hi Miss 💕</h1>
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="https://media.tenor.com/PDiYbMpkf-8AAAAM/dog-smile.gif" alt="GIF 1">
+            <img src="https://media.tenor.com/KWiXNaZ2OzkAAAAM/shironeko-cat-holding-a-flower-shironeko.gif" alt="GIF 2">
+            <img src="https://gifdb.com/images/high/dog-with-flower-0hcj2kjntjz8uat0.gif" alt="GIF 3">
+            <img src="https://media.tenor.com/xOP9ibYmD98AAAAM/cat-animal.gif" alt="GIF 3">
+            <img src="https://media.tenor.com/PDiYbMpkf-8AAAAM/dog-smile.gif" alt="GIF 1 Duplicate"> <!-- Duplicate for seamless loop -->
+        </div>
+    </div>
+    <p>Sending virtual flowers! 🌺</p>
+    <a href="valentines-invite-2.html" class="btn b-3">Thank you!</a>
+    
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #fdd2ff;
+            font-family: 'Atma', cursive;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-size: 1.5em;
+            color: #2e8b57;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff35ff;
+            border-radius: 0.5rem;
+            position: relative;
+            top: 0;
+            transition: all 300ms ease-in-out;
+            box-shadow: 0 0.6em #962296, 0 0.9em rgba(0, 0, 0, 0.4);
+            }
+
+        .btn:hover {
+            background: #ff35ff;
+            color: #fdd2ff;
+        }
+
+        .btn.b-3:hover {
+        top: -0.5em;
+        box-shadow: 0 0.6em #962296, 0 1.3em rgba(0, 0, 0, 0.4);
+        }
+
+        .btn.b-3:active {
+        top: 0.4em;
+        box-shadow: 0 0.2em #962296, 0 0.5em rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .btn-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .btn {
+                width: 80%;
+            }
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gif-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        .gif-item img {
+            width: auto;
+            height: 350px;
+            border-radius: 10px;
+            display: inline-flex;
+        }
+        .gif-item-2{
+            flex-direction:row;
+        }
+        
+        .gif-item span{
+            margin-top: 10px;
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gif-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gif-item img {
+                width: 300px;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>I am inviting you to</h1>
+    <div class="gif-container">
+        <div class="gif-item">
+            <img src="https://media1.giphy.com/media/d30mgvM8QxyQE/giphy.gif?cid=6c09b952mxydh3c41sitzyacf7ugfdzqu4mot7ptya6cjei1&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="GIF 1">
+            <span>Movies</span>
+        </div>
+        <div class="gif-item">
+            <div class="gif-item-2">
+                <img src="https://media2.giphy.com/media/Wf9dyOrB0nGJn5FIYf/giphy.gif?cid=6c09b952hs7dzlu7xm2h3a2j3i11kuictwk2w7xfqw6ok0zw&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="GIF 2">
+                <img src="https://media.tenor.com/kcT0WPjRPDoAAAAi/cat-eating-meme-nom-nom.gif" alt="GIF 2">
+            </div>
+            <span>Lunch/Dinner</span>
+        </div>
+        <div class="gif-item">
+            <img src="https://www.troublefreepool.com/media/daniel-craig-board-games-gif.213725/full" alt="GIF 3">
+            <span>Games</span>
+        </div>
+    </div>
+    <p>Tomorrow, on Valentines Day.</p>
+    <a href="valentines-invite-3.html" class="btn b-3">Yay!</a>
+    
+</body>
+</html>

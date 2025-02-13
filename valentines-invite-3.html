@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #fdd2ff;
+            font-family: 'Atma', cursive;
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+        h1 {
+            font-size: 4em;
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        p {
+            font-size: 1.5em;
+            color: #2e8b57;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn {
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff35ff;
+            border-radius: 0.5rem;
+            position: relative;
+            top: 0;
+            transition: all 300ms ease-in-out;
+            box-shadow: 0 0.6em #962296, 0 0.9em rgba(0, 0, 0, 0.4);
+            }
+
+        .btn:hover {
+            background: #ff35ff;
+            color: #fdd2ff;
+        }
+
+        .btn.b-3:hover {
+        top: -0.5em;
+        box-shadow: 0 0.6em #962296, 0 1.3em rgba(0, 0, 0, 0.4);
+        }
+
+        .btn.b-3:active {
+        top: 0.4em;
+        box-shadow: 0 0.2em #962296, 0 0.5em rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+            .btn-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .btn {
+                width: 80%;
+            }
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gif-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        .gif-item img {
+            width: auto;
+            height: 350px;
+            border-radius: 10px;
+            display: inline-flex;
+        }
+        .gif-item-2{
+            flex-direction:row;
+        }
+        
+        .gif-item span{
+            margin-top: 10px;
+            color: #ff35ff;
+            font-family: 'Knewave', cursive;
+            font-size: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .gif-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gif-item img {
+                width: 300px;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Please answer this survey for me 🥺</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXfCJ6e08mzEV_GS41jrSxvigUSvzpBxK4p1o7nnVra4-U1Q/viewform?embedded=true" width="80%" height="2943" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <a href="valentines-invite-4.html" class="btn b-3">Done!</a>
+    
+</body>
+</html>
