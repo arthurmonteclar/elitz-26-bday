@@ -152,11 +152,15 @@
         function showText(index) {
             texts.forEach((text, i) => {
                 const video = text.querySelector('video');
-                text?.classList?.remove('active');
-                video?.muted = true;
+                text.classList.remove('active');
+                if(video){
+                    video.muted = true;
+                }
                 if (i === index) {
-                    text?.classList.add('active');
-                    video?.muted = false;
+                    text.classList.add('active');
+                    if(video){
+                        video.muted = false;
+                    }
                 }
             });
         }
